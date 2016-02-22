@@ -61,3 +61,25 @@ Rx.Observable.of(1,2,3,2,3,4,1)
       err => console.log('Error:', err),
       () => console.log('Completed')
     ));
+
+log("-------------sum---------------");
+Rx.Observable.range(0,9).sum()
+  .subscribe(observer());
+Rx.Observable.fromArray([{value:1},{value:2},{value:3}])
+  .sum(x => x.value)
+  .subscribe(observer());
+
+log("-------------scan---------------");
+Rx.Observable.range(1,6)
+  .scan((acc, x) => acc + x)
+  .subscribe(observer());
+  
+Rx.Observable.range(1,6)
+  .scan((acc, x) => {return acc + x}, 10)
+  .subscribe(observer());
+ 
+log("-------------expand-------------");
+Rx.Observable.repeat(1,6)
+  .expand(x => Rx.Observable.just(20+x))
+  .take(10)
+  .subscribe(observer());
