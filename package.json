@@ -1,0 +1,29 @@
+{
+  "name": "rx-starter-practice",
+  "version": "1.0.0",
+  "description": "learning RxJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kakanjau/Rx-starter-practice.git"
+  },
+  "keywords": [
+    "RxJS",
+    "starter",
+    "learning",
+    "practice"
+  ],
+  "author": "qiaoliang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kakanjau/Rx-starter-practice/issues"
+  },
+  "homepage": "https://github.com/kakanjau/Rx-starter-practice#readme",
+  "dependencies": {
+    "rx": "^4.0.8"
+  }
+}
